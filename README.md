@@ -39,6 +39,6 @@ The Spotify regional server warehouse provides music streaming services for bill
 - ###### Third Interval: 
   After the 23:59 till the 12:00 the waiting time must be 1 second
   
-The exponential backoff of these intervals are increased by the next factors:
+The exponential backoff of these intervals are increased by these factors:
 - ###### For the first and third intervals: doubles on each iteration
 - ###### For the second interval: triples on each iteration
