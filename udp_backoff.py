@@ -42,7 +42,7 @@ class Client:
         sock.connect((self.host, self.port))
         print(f"Client socket name: {sock.getsockname()}")
 
-        message = f"Hello server, current time is {datetime.datetime.now()}"
+        message = f"Hello server, the current date and time are {datetime.datetime.now().strftime('%b %d %Y %H:%M:%S')}"
         data = message.encode('ascii')
 
         delay = 0.1
