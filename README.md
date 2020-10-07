@@ -26,7 +26,7 @@ For client setup, run below command in the second terminal:
     
     $ python3 udp_backoff.py client
    
-Optionally, you can specify the interface using **--host** or **-H** and the port using **--port** or **-p** options. By default, loopback address and port 9001 are used.
+Optionally, you can specify the interface using **--host** or **-H** and the port using **--port** or **-P** options. By default, loopback address and port 9001 are used.
 
 ## Scenario
 The Spotify regional server warehouse provides music streaming services for billions of clients 24/7. Responding time of the servers depends on client load. That is, clients must wait for response according to the next time schedule:
@@ -34,11 +34,11 @@ The Spotify regional server warehouse provides music streaming services for bill
   Between 12:00 – 17:00 the maximum waiting time must be 2 seconds
   
 - ###### Second Interval: 
-  After the 17:00 till the 23:59 the maximum waiting time must be for 4 seconds
+  From 17:00 till 23:59 the maximum waiting time must be for 4 seconds
   
 - ###### Third Interval: 
-  After the 23:59 till the 12:00 the waiting time must be 1 second
+  From 23:59 till 12:00 the waiting time must be 1 second
   
-The exponential backoff of these intervals are increased by these factors:
+The exponential backoff of these intervals is increased by these factors:
 - ###### For the first and third intervals: doubles on each iteration
 - ###### For the second interval: triples on each iteration
